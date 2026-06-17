@@ -31,12 +31,6 @@ env.bak/
 venv.bak/
 .python-version
 
-# ── Pipeline runtime folders ───────────────────────────────────────────────────
-# These are mounted as Docker volumes — data stays on your machine, not in git
-input_files/
-processed_files/
-failed_files/
-logs/
 
 # ── IDE / Editor ──────────────────────────────────────────────────────────────
 .vscode/
