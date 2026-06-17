@@ -1,0 +1,96 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# ZKB Pipeline — .gitignore
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Secrets — NEVER commit these ──────────────────────────────────────────────
+.env
+*.env
+!.env.example
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pycache
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+*.spec
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# ── Pipeline runtime folders ───────────────────────────────────────────────────
+# These are mounted as Docker volumes — data stays on your machine, not in git
+input_files/
+processed_files/
+failed_files/
+logs/
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ── OS generated ──────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Testing & coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+nosetests.xml
+test-results/
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+# Keep Dockerfile and docker-compose — they are safe to commit
+# But ignore any local override files
+docker-compose.override.yml
+
+# ── Database dumps ────────────────────────────────────────────────────────────
+*.sql.gz
+*.dump
+*.backup
+
+# ── Data files — don't commit raw data to git ─────────────────────────────────
+*.csv
+*.xlsx
+*.xls
+
+# ── Jupyter Notebooks ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
