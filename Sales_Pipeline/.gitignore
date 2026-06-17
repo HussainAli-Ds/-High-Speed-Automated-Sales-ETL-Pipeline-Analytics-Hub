@@ -1,5 +1,5 @@
 # ══════════════════════════════════════════════════════════════════════════════
-# Pipeline — .gitignore
+# ZKB Pipeline — .gitignore
 # ══════════════════════════════════════════════════════════════════════════════
 
 # ── Secrets — NEVER commit these ──────────────────────────────────────────────
@@ -31,6 +31,8 @@ env.bak/
 venv.bak/
 .python-version
 
+# ── Pipeline runtime folders ───────────────────────────────────────────────────
+# These are mounted as Docker volumes — data stays on your machine, not in git
 
 # ── IDE / Editor ──────────────────────────────────────────────────────────────
 .vscode/
